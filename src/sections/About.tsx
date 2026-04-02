@@ -54,7 +54,7 @@ export function About() {
 
             {/* Certifications List */}
             <div className="pt-4 space-y-2">
-              {siteConfig.about.certification.map((cert, idx) => (
+              {siteConfig.about.certification.map((cert: string, idx: number) => (
                 <div key={idx} className="flex items-center gap-2 text-sm text-(--text)">
                   <CheckCircle className="w-4 h-4 text-accent" />
                   {cert}
