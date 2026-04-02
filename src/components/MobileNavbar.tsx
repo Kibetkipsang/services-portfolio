@@ -81,7 +81,7 @@ export function MobileNavbar() {
               onClick={() => scrollToSection("home")}
               style={{ zIndex: 1000 }}
             >
-              <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-accent to-purple-600 bg-clip-text text-transparent" style={{ margin: 0 }}>
+              <h1 className="text-xl sm:text-2xl font-bold bg-linear-to-r from-accent to-purple-600 bg-clip-text text-transparent" style={{ margin: 0 }}>
                 {siteConfig.name.split(" ")[0]}
               </h1>
             </motion.div>
@@ -93,7 +93,7 @@ export function MobileNavbar() {
                   key={item}
                   onClick={() => scrollToSection(item)}
                   whileHover={{ y: -2 }}
-                  className="text-sm lg:text-base text-[var(--text)] hover:text-accent transition-colors font-medium"
+                  className="text-sm lg:text-base text-(--text) hover:text-accent transition-colors font-medium"
                 >
                   {item}
                 </motion.button>
@@ -109,7 +109,7 @@ export function MobileNavbar() {
               <ThemeToggle />
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 rounded-full hover:bg-[var(--accent-bg)] transition-colors"
+                className="p-2 rounded-full hover:bg-(--accent-bg) transition-colors"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 style={{ zIndex: 1000, position: "relative" }}
               >
@@ -149,7 +149,7 @@ export function MobileNavbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.05 }}
                   onClick={() => scrollToSection(item)}
-                  className="block w-full text-left py-3 text-[var(--text)] hover:text-accent transition-colors font-medium"
+                  className="block w-full text-left py-3 ttext-(--text) hover:text-accent transition-colors font-medium"
                   style={{
                     borderBottom: idx < navItems.length - 1 ? "1px solid var(--border)" : "none"
                   }}
