@@ -3,7 +3,7 @@ import { type SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
   name: "Glow by Grace",
-  tagline: "Luxury Hair & Makeup Studio — Where Beauty Meets Excellence",
+  tagline: "Luxury Hair & Makeup Studio - Where Beauty Meets Excellence",
   logo: "/images/logo.svg",
   heroImage: "https://images.unsplash.com/photo-1560066984-138dad7c30f2?w=1600&h=900&fit=crop",
   
