@@ -3,6 +3,17 @@ import { motion } from "framer-motion";
 import { ResponsiveServiceCard } from "@/components/ResponsiveServiceCard";
 import { siteConfig } from "@/config/siteConfig";
 
+// Define the Service type locally - MATCHING the actual structure
+type Service = {
+  id: string | number;  // ← Change this to string | number to match
+  name: string;
+  price: string;
+  duration: string;
+  popular: boolean;
+  description: string;
+  features: string[];
+};
+
 export function Services() {
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -26,7 +37,7 @@ export function Services() {
         </motion.div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {siteConfig.services.map((service) => (
+          {siteConfig.services.map((service: Service) => (
             <ResponsiveServiceCard 
               key={service.id} 
               {...service} 
