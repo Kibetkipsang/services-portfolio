@@ -1,6 +1,6 @@
 // src/components/ThemeProvider.tsx
 import { useEffect } from 'react';
-import { useThemeStore } from '../stores/ThemeStore';
+import { useThemeStore } from '@/stores/ThemeStore';
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const { resolvedTheme } = useThemeStore();

@@ -1,7 +1,7 @@
 // src/components/ThemeToggle.tsx
 import { Moon, Sun, Monitor } from 'lucide-react';
-import { useThemeStore } from '../stores/ThemeStore';
-import { PremiumButton } from '../components/ui/premium-button';
+import { useThemeStore } from '@/stores/ThemeStore';
+import { PremiumButton } from '@/components/ui/premium-button';
 import { motion } from 'framer-motion';
 
 export function ThemeToggle() {

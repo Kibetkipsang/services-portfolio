@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
-import { PremiumButton } from "../components/ui/premium-button";
+import { PremiumButton } from "@/components/ui/premium-button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useUIStore } from "@/stores/useUIStore";
-import { siteConfig } from "../config/siteConfig";
+import { siteConfig } from "@/config/siteConfig";
 
 const navItems = ["Home", "Services", "Gallery", "About", "Contact"];
 
