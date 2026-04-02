@@ -9,6 +9,15 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-    },
+      // Add explicit aliases for common paths
+      "@/components": path.resolve(__dirname, "./src/components"),
+      "@/config": path.resolve(__dirname, "./src/config"),
+      "@/sections": path.resolve(__dirname, "./src/sections"),
+      "@/types": path.resolve(__dirname, "./src/types"),
+    }
   },
+  // Force Vite to respect TypeScript paths
+  optimizeDeps: {
+    force: true
+  }
 })
