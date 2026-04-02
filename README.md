@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Glow by Grace - Premium Beauty Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
 
-Currently, two official plugins are available:
+A **production-ready, mobile-first** portfolio website for beauty professionals, hairstylists, and makeup artists. Features 3D concave buttons, dark/light mode, WhatsApp integration, and a fully customizable configuration system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Portfolio Preview](https://images.unsplash.com/photo-1560066984-138dad7c30f2?w=1200&h=630&fit=crop)
 
-## React Compiler
+##  Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+###  Design & UX
+- **Mobile-first responsive design** - Perfect on phones, tablets, desktops, and 4K TVs
+- **Dark/Light mode** - Automatic system preference detection + manual toggle
+- **3D concave buttons** - Tactile, premium feel that increases conversions
+- **Smooth animations** - Framer Motion powered micro-interactions
+- **Glass morphism effects** - Modern, luxury aesthetic
 
-## Expanding the ESLint configuration
+### 🔧 Technical Features
+- **TypeScript** - Type-safe, production-ready code
+- **Zustand state management** - Lightweight, performant theme & UI state
+- **shadcn/ui components** - Accessible, customizable UI library
+- **No backend required** - Static site, deploy anywhere
+- **WhatsApp integration** - Instant client communication via contact form
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+###  Sections
+- **Hero Section** - Eye-catching introduction with CTA buttons
+- **Services** - Dynamic service cards with pricing, duration, and features
+- **Gallery** - Responsive image grid with hover effects
+- **About** - Professional bio, experience, and certifications
+- **Contact** - Contact info + WhatsApp contact form
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+##  Quick Start
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
+- Node.js 18+ or Bun 1.0+
+- npm or yarn or pnpm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# Clone the repository
+git clone https://github.com/Kibetkipsang/services-portfolio.git
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Navigate to project
+cd services-portfolio
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
