@@ -3,7 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge";
 import { PremiumButton } from "@/components/ui/premium-button";
 import { motion } from "framer-motion";
-import { Sparkles, Clock, CheckCircle2 } from "lucide-react";
+import { Clock, CheckCircle2 } from "lucide-react";
 import { type Service } from "@/types";
 
 interface ResponsiveServiceCardProps extends Service {
@@ -27,34 +27,33 @@ export function ResponsiveServiceCard({
       whileHover={{ y: -4 }}
       className="h-full"
     >
-      <Card className="relative overflow-hidden h-full bg-[var(--bg)] border-[var(--border)] shadow-lg hover:shadow-xl transition-all duration-300">
+      <Card className="relative overflow-hidden h-full bg-(--bg) border-(--border) shadow-lg hover:shadow-xl transition-all duration-300">
         {popular && (
           <div className="absolute top-3 right-3 z-10">
             <Badge className="bg-accent text-white border-0 shadow-md px-2 py-0.5 sm:px-3 sm:py-1 text-xs">
-              <Sparkles className="w-3 h-3 mr-1" />
               Popular
             </Badge>
           </div>
         )}
 
         <CardHeader className="p-4 sm:p-6">
-          <CardTitle className="text-lg sm:text-xl md:text-2xl font-bold text-[var(--text-h)]">
+          <CardTitle className="text-lg sm:text-xl md:text-2xl font-bold text-(--text-h)">
             {name}
           </CardTitle>
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-[var(--text)]">
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-(--text)">
             <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
             {duration}
           </div>
         </CardHeader>
 
         <CardContent className="p-4 pt-0 sm:p-6 sm:pt-0 space-y-3 sm:space-y-4">
-          <p className="text-xs sm:text-sm text-[var(--text)] leading-relaxed">{description}</p>
+          <p className="text-xs sm:text-sm text-(--text) leading-relaxed">{description}</p>
 
           {features.length > 0 && (
             <div className="space-y-1.5 sm:space-y-2">
               {features.slice(0, 3).map((feature, idx) => (
-                <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-[var(--text)]">
-                  <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0" />
+                <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-(--text)">
+                  <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-accent shrink-0" />
                   <span className="truncate">{feature}</span>
                 </div>
               ))}

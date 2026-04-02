@@ -13,7 +13,7 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-transparent z-10" />
+        <div className="absolute inset-0 bg-linear-to-br from-accent/20 via-transparent to-transparent z-10" />
         <img
           src={siteConfig.heroImage}
           alt={siteConfig.name}
@@ -40,12 +40,12 @@ export function Hero() {
           </motion.div>
 
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-accent to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-linear-to-r from-accent to-purple-600 bg-clip-text text-transparent">
             {siteConfig.name}
           </h1>
 
           {/* Tagline */}
-          <p className="text-base sm:text-lg md:text-xl text-[var(--text)] mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-(--text) mb-8 max-w-2xl mx-auto">
             {siteConfig.tagline}
           </p>
 
@@ -74,10 +74,10 @@ export function Hero() {
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-[var(--social-bg)] backdrop-blur-sm rounded-2xl p-3 sm:p-4 border border-[var(--border)]"
+                className="bg-(--social-bg) backdrop-blur-sm rounded-2xl p-3 sm:p-4 border border-(--border)"
               >
                 <div className="text-xl sm:text-2xl font-bold text-accent">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-[var(--text)]">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-(--text)">{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -91,7 +91,7 @@ export function Hero() {
         className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer z-20"
         onClick={scrollToContact}
       >
-        <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-[var(--text)] rounded-full flex justify-center">
+        <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-(--text) rounded-full flex justify-center">
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}

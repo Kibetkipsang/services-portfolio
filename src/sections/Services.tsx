@@ -9,7 +9,7 @@ export function Services() {
   };
 
   return (
-    <section id="services" className="py-12 sm:py-20 px-4 bg-[var(--social-bg)]">
+    <section id="services" className="py-12 sm:py-20 px-4 bg-(--social-bg)">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,10 +17,10 @@ export function Services() {
           viewport={{ once: true }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[var(--text-h)]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-(--text-h)">
             Our Services
           </h2>
-          <p className="text-sm sm:text-base text-[var(--text)] max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-(--text) max-w-2xl mx-auto">
             Premium beauty services tailored to make you look and feel your best
           </p>
         </motion.div>

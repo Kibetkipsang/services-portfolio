@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/siteConfig";
 
 export function Gallery() {
   return (
-    <section id="gallery" className="py-12 sm:py-20 px-4 bg-[var(--bg)]">
+    <section id="gallery" className="py-12 sm:py-20 px-4 bg-(--bg)">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,10 +12,10 @@ export function Gallery() {
           viewport={{ once: true }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[var(--text-h)]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-(--text-h)">
             Our Work
           </h2>
-          <p className="text-sm sm:text-base text-[var(--text)] max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-(--text) max-w-2xl mx-auto">
             Browse through our latest transformations
           </p>
         </motion.div>
@@ -31,7 +31,7 @@ export function Gallery() {
               whileHover={{ scale: 1.05 }}
               className="relative group cursor-pointer"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-purple-500/20 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+              <div className="absolute inset-0 bg-linear-to-br from-accent/20 to-purple-500/20 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity z-10" />
               <img 
                 src={image.src} 
                 alt={image.alt}

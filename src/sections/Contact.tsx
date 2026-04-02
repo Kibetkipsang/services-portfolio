@@ -30,7 +30,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-20 px-4 bg-[var(--bg)]">
+    <section id="contact" className="py-12 sm:py-20 px-4 bg-(--bg)">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,10 +38,10 @@ export function Contact() {
           viewport={{ once: true }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[var(--text-h)]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-(--text-h)">
             Get In Touch
           </h2>
-          <p className="text-sm sm:text-base text-[var(--text)] max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-(--text) max-w-2xl mx-auto">
             Ready to transform your look? Book an appointment or ask any questions
           </p>
         </motion.div>
@@ -56,18 +56,18 @@ export function Contact() {
           >
             <div className="grid gap-3 sm:gap-4">
               {contactItems.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-[var(--social-bg)] rounded-xl border border-[var(--border)]">
+                <div key={idx} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-(--social-bg) rounded-xl border border-(--border)">
                   <div className="p-2 bg-accent/10 rounded-lg">
                     <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-xs sm:text-sm text-[var(--text)]">{item.label}</p>
+                    <p className="text-xs sm:text-sm text-(--text)">{item.label}</p>
                     {item.href ? (
-                      <a href={item.href} className="text-sm sm:text-base font-medium text-[var(--text-h)] hover:text-accent transition-colors">
+                      <a href={item.href} className="text-sm sm:text-base font-medium text-(--text-h) hover:text-accent transition-colors">
                         {item.value}
                       </a>
                     ) : (
-                      <p className="text-sm sm:text-base font-medium text-[var(--text-h)]">{item.value}</p>
+                      <p className="text-sm sm:text-base font-medium text-(--text-h)">{item.value}</p>
                     )}
                   </div>
                 </div>
@@ -90,34 +90,34 @@ export function Contact() {
           >
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
-                <label className="block text-sm font-medium text-[var(--text-h)] mb-2">Name</label>
+                <label className="block text-sm font-medium text-(--text-h) mb-2">Name</label>
                 <input
                   type="text"
                   name="name"
                   required
-                  className="w-full px-4 py-2 sm:py-3 bg-[var(--bg)] border border-[var(--border)] rounded-lg focus:outline-none focus:border-accent transition-colors text-[var(--text-h)]"
+                  className="w-full px-4 py-2 sm:py-3 bg-(--bg) border border-(--border) rounded-lg focus:outline-none focus:border-accent transition-colors text-(--text-h)"
                   placeholder="Your name"
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-[var(--text-h)] mb-2">Email</label>
+                <label className="block text-sm font-medium text-(--text-h) mb-2">Email</label>
                 <input
                   type="email"
                   name="email"
                   required
-                  className="w-full px-4 py-2 sm:py-3 bg-[var(--bg)] border border-[var(--border)] rounded-lg focus:outline-none focus:border-accent transition-colors text-[var(--text-h)]"
+                  className="w-full px-4 py-2 sm:py-3 bg-(--bg) border border-(--border) rounded-lg focus:outline-none focus:border-accent transition-colors text-(--text-h)"
                   placeholder="your@email.com"
                 />
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-[var(--text-h)] mb-2">Message</label>
+                <label className="block text-sm font-medium text-(--text-h) mb-2">Message</label>
                 <textarea
                   name="message"
                   required
                   rows={4}
-                  className="w-full px-4 py-2 sm:py-3 bg-[var(--bg)] border border-[var(--border)] rounded-lg focus:outline-none focus:border-accent transition-colors text-[var(--text-h)] resize-none"
+                  className="w-full px-4 py-2 sm:py-3 bg-(--bg) border border-(--border) rounded-lg focus:outline-none focus:border-accent transition-colors text-(--text-h) resize-none"
                   placeholder="Tell me about your requirements..."
                 />
               </div>
